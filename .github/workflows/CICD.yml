@@ -23,7 +23,7 @@ jobs:
       run: make build
 
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/calculator_app:latest
+      run: make push
 
     - name: Run Docker container
       run: make run
