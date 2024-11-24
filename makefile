@@ -17,7 +17,7 @@ build:
 
 # Run the Docker container
 run:
-	docker run -d -p 5000:5000 --name calculator_app_container calculator_app
+	docker run -d -p 5000:5000 --name calculator_app_container arko0/calculator_app:latest
 
 # Stop and remove the Docker container
 stop:
