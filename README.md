@@ -1,3 +1,4 @@
+[![CICD](https://github.com/nogibjj/arko_dockerized_app/actions/workflows/CICD.yml/badge.svg)](https://github.com/nogibjj/arko_dockerized_app/actions/workflows/CICD.yml)
 # Calculator App with Docker
 
 This is a simple calculator web application built with Flask and Docker. The app provides basic arithmetic operations (addition, subtraction, multiplication, division) via a RESTful API. It is containerized using Docker for easy deployment and scalability.
