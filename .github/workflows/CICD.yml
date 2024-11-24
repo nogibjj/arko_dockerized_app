@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: CICD
 
 on:
   push:
@@ -22,7 +22,10 @@ jobs:
     - name: Build Docker image
       run: make build
 
-    - name: Run Docker
+    - name: Push Docker image
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/calculator_app:latest
+
+    - name: Run Docker container
       run: make run
       env:
         DOCKER_ID_USER: ${{ secrets.DOCKER_USERNAME }}
@@ -38,6 +41,6 @@ jobs:
             echo "Waiting for Flask app to be ready..."
             sleep 5
           done
-  
+
     - name: Test Run
       run: make test
